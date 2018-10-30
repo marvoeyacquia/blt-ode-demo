@@ -43,13 +43,16 @@ events:
         - deploy:
             script:
               - pipelines-deploy
+              - pipelines-sync-dbs blt_ode_demo cddemo11
   pr-merged:
     steps:
       - deploy:
           script:
             - pipelines-deploy
+            - pipelines-sync-dbs blt_ode_demo cddemo11
   pre-closed:
     steps:
       - deploy:
           script:
             - pipelines-deploy
+            - pipelines-sync-dbs blt_ode_demo cddemo11
