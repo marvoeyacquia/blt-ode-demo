@@ -8,8 +8,10 @@ project:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
 git:
-  default_branch: master
-  remotes: {  }
+  default_branch: blt-ode-demo
+  remotes:
+    acquia: 'cddemo11@svn-28441.prod.hosting.acquia.com:cddemo11.git'
+    
   # The value of a hook should be the file path to a directory containing an
   # executable file named after the hook. Changing a hook value to 'false' will disable it.
   # You should execute `blt blt:init:git-hooks` after modifying these values.
