@@ -1,0 +1,73 @@
+# This is a placeholder file used to track when cddemo11.aliases.drushrc.php was converted.
+# If you delete cddemo11.aliases.drushrc.php, then you may delete this file.
+local:
+    root: /var/www/blt-ode-demo/docroot
+    uri: 'http://local.blt-ode-demo.com'
+    host: local.blt-ode-demo.com
+    user: vagrant
+    ssh: { options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
+
+dev:
+  host: cddemo11dev.ssh.prod.acquia-sites.com
+  options:
+    ac-env: dev
+    ac-realm: prod
+    ac-site: cddemo11
+  paths:
+    drush-script: drush9
+  root: /var/www/html/cddemo11.dev/docroot
+  uri: cddemo11dev.prod.acquia-sites.com
+  user: cddemo11.dev
+livedev:
+  options:
+    parent: '@cddemo11.dev'
+  root: /mnt/gfs/cddemo11.dev/livedev/docroot
+
+ode35:
+  host: cddemo11ode35.ssh.prod.acquia-sites.com
+  options:
+    ac-env: ode35
+    ac-realm: prod
+    ac-site: cddemo11
+  paths:
+    drush-script: drush9
+  root: /var/www/html/cddemo11.ode35/docroot
+  uri: cddemo11ode35.prod.acquia-sites.com
+  user: cddemo11.ode35
+livedev:
+  options:
+    parent: '@cddemo11.ode35'
+  root: /mnt/gfs/cddemo11.ode35/livedev/docroot
+
+prod:
+  host: cddemo11.ssh.prod.acquia-sites.com
+  options:
+    ac-env: prod
+    ac-realm: prod
+    ac-site: cddemo11
+  paths:
+    drush-script: drush9
+  root: /var/www/html/cddemo11.prod/docroot
+  uri: cddemo11.prod.acquia-sites.com
+  user: cddemo11.prod
+livedev:
+  options:
+    parent: '@cddemo11.prod'
+  root: /mnt/gfs/cddemo11.prod/livedev/docroot
+
+test:
+  host: cddemo11stg.ssh.prod.acquia-sites.com
+  options:
+    ac-env: test
+    ac-realm: prod
+    ac-site: cddemo11
+  paths:
+    drush-script: drush9
+  root: /var/www/html/cddemo11.test/docroot
+  uri: cddemo11stg.prod.acquia-sites.com
+  user: cddemo11.test
+livedev:
+  options:
+    parent: '@cddemo11.test'
+  root: /mnt/gfs/cddemo11.test/livedev/docroot
+

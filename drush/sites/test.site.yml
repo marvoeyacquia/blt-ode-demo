@@ -1,0 +1,15 @@
+dev:
+  host: cddemo11stg.ssh.prod.acquia-sites.com
+  options:
+    ac-env: test
+    ac-realm: prod
+    ac-site: cddemo11
+  paths:
+    drush-script: drush9
+  root: /var/www/html/cddemo11.test/docroot
+  uri: cddemo11stg.prod.acquia-sites.com
+  user: cddemo11.test
+livedev:
+  options:
+    parent: '@cddemo11.test'
+  root: /mnt/gfs/cddemo11.test/livedev/docroot
