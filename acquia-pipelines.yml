@@ -9,6 +9,10 @@ variables:
     COMPOSER_BIN: $SOURCE_DIR/vendor/bin
     BLT_DIR: $SOURCE_DIR/vendor/acquia/blt
 
+cde-databases:
+  - blt_ode_demo
+  - cddemo11
+
 events:
   build:
     steps:
